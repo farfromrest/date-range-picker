@@ -1,0 +1,129 @@
+@import 'colors';
+@import 'mixins';
+@import 'variables';
+
+.custom-date-picker-view {
+  position: absolute;
+  top: 5.833em;
+  right: 0;
+  z-index: 2;
+  padding: 2.92em 5.42em 3.166em;
+
+  &.start-field-selected {
+
+    .start-date-input-label::before {
+      content: 'Choose ';
+    }
+
+    .start-date-input-field {
+      border-color: $secondary-color;
+    }
+
+  }
+
+  &.end-field-selected {
+
+    .end-date-input-label::before {
+      content: 'Choose ';
+    }
+
+    .end-date-input-field {
+      border-color: $secondary-color;
+    }
+
+  }
+
+  .title {
+    font-size: 1.92em;
+    font-weight: 300;
+    line-height: 1.48;
+  }
+
+  .date-input {
+    padding-top: 1.833em;
+    float: left;
+    width: 20em;
+
+    &:first-of-type {
+      margin-right: 7.33em;
+    }
+
+  }
+
+  .date-input-label {
+    text-transform: uppercase;
+    display: block;
+    font-weight: 600;
+    line-height: 1.25;
+    padding-bottom: 0.5em;
+  }
+
+  .date-input-field {
+    font-weight: 700;
+    font-size: 1.9em;
+    width: 100%;
+    line-height: 1.22;
+    border-bottom: 4px solid $light-grey;
+  }
+
+  .calendar-slider {
+    @extend %clearfix;
+    clear: both;
+    font-size: 1.25em;
+    width: calc(#{($day-button-size * 14)} + 12em + 1px);
+    position: relative;
+    padding-top: 3.25rem;
+  }
+
+  .next-month-button,
+  .previous-month-button {
+    position: absolute;
+    height: 3.833rem;
+    width: 3.833rem;
+    top: 13rem;
+    color: $light-grey;
+    border-width: 2px;
+    border-style: solid;
+    background: {
+      size: 9px 16px;
+      position: center;
+      repeat: no-repeat;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      border-style: solid;
+      border-width: 0;
+      border-top-width: 2px;
+      border-left-width: 2px;
+      width: 0.8rem;
+      height: 0.8rem;
+      left: 1.6rem;
+      position: absolute;
+      top: 1.3rem;
+    }
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+
+  .previous-month-button {
+    left: -3.833rem;
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .next-month-button {
+    right: -3.833rem;
+
+    &::before {
+      left: 1.1rem;
+      transform: rotate(135deg);
+    }
+  }
+
+}

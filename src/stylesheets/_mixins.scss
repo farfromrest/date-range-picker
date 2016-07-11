@@ -1,0 +1,29 @@
+%clearfix {
+
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+}
+
+@function em($pixels, $base-size: 12px) {
+  @return ($pixels / $base-size) * 1em;
+}
+
+@function rem($pixels, $base-size: 12px) {
+  @return ($pixels / $base-size) * 1rem;
+}
+
+@mixin background-image($file, $type) {
+  background-image: url($file + '.' + $type);
+
+  @media only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+    & {
+      background-image: url($file + '@2x.' + $type);
+    }
+  }
+}

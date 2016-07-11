@@ -1,0 +1,71 @@
+@import 'colors';
+@import 'variables';
+
+.calendar-view {
+  width: ($day-button-size * 7) + 6em;
+  float: left;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 3.5em;
+  padding-right: 2.5em;
+
+  &:first-of-type {
+    padding-left: 2.5em;
+    padding-right: 3.5em;
+    border-right: 1px solid $light-grey;
+    width: calc(#{($day-button-size * 7)} + 6em + 1px);
+  }
+
+  .month-name {
+    text-transform: uppercase;
+    padding-left: 0.75em;
+    line-height: 1.93;
+    letter-spacing: 1px;
+    font-size: 1.33em;
+  }
+
+  .day-of-week,
+  .calendar-day-button {
+    width: $day-button-size;
+    height: $day-button-size;
+    line-height: $day-button-size;
+    text-align: center;
+    float: left;
+  }
+
+  .day-of-week {
+    font-weight: 800;
+  }
+
+}
+
+
+.calendar-day-button {
+  border-bottom: 1px solid $light-grey;
+
+  &:nth-last-child(-n+7) {
+    border-bottom: 0;
+  }
+
+  &:not([disabled]) {
+
+    &:hover {
+      background-color: $off-white;
+    }
+
+    &.selected {
+      background-color: $secondary-color;
+      color: $white;
+    }
+
+    &.today {
+      color: $secondary-color;
+    }
+
+  }
+
+  &[disabled] {
+    color: $light-grey;
+  }
+
+}
