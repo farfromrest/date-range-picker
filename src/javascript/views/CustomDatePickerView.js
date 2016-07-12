@@ -1,8 +1,8 @@
-import template from 'custom-date-picker-view';
+import template from '../../templates/custom-date-picker-view';
 import BaseView from 'BaseView';
-import CalendarView from 'CalendarView';
+import CalendarView from './CalendarView';
 
-import 'stylesheets/custom-date-picker-view';
+import '../../stylesheets/custom-date-picker-view';
 
 export default BaseView.extend({
   className: 'custom-date-picker-view',

@@ -1,8 +1,8 @@
-var template = require('calendar-view');
+var template = require('../../templates/calendar-view');
 import BaseView from 'BaseView';
 var DateHelper = require('DateHelper');
 
-require('stylesheets/calendar-view');
+require('../../stylesheets/calendar-view');
 
 export default BaseView.extend({
   className: 'calendar-view',
