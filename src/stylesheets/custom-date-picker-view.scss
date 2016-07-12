@@ -42,7 +42,7 @@
   .date-input {
     padding-top: 1.833em;
     float: left;
-    width: 20em;
+    width: ($day-button-size * 7) + 6em;
 
     &:first-of-type {
       margin-right: 7.33em;
