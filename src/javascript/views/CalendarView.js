@@ -39,7 +39,7 @@ export default BaseView.extend({
   },
 
   hoveredOverCalendarDay: function(event) {
-    this.trigger('hover-date', event.currentTarget.dataset.date);
+    this.trigger('hover-date', $(event.currentTarget).data('date'));
   },
 
   hoveredOffCalendarDay: function() {
@@ -47,7 +47,7 @@ export default BaseView.extend({
   },
 
   clickedCalendarDay: function(event) {
-    this.trigger('select-date', event.currentTarget.dataset.date);
+    this.trigger('select-date', $(event.currentTarget).data('date'));
   }
 
 });
