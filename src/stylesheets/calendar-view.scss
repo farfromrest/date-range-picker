@@ -1,5 +1,5 @@
-@import 'colors';
-@import 'vars';
+@import '~stylesheets/colors';
+@import '~stylesheets/vars';
 
 .calendar-view {
   width: ($day-button-size * 7) + 6em;

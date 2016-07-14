@@ -1,6 +1,6 @@
-@import 'colors';
-@import 'mixins';
-@import 'vars';
+@import '~stylesheets/colors';
+@import '~stylesheets/mixins';
+@import '~stylesheets/vars';
 
 .custom-date-picker-view {
   position: absolute;
